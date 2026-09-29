@@ -1,0 +1,36 @@
+/* Trust Score: visual layer only (ring + thin meters + spacing). Text and values are unchanged. */
+:root { --trust-strong: #0d9488; }
+:root[data-theme="dark"] { --trust-strong: #2dd4bf; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --trust-strong: #2dd4bf; } }
+
+.trust { padding: var(--s6) var(--s6) var(--s5); max-width: 760px; }
+.trust-head { gap: var(--s6); margin-bottom: var(--s6); }
+.ring { position: relative; width: 132px; height: 132px; flex: none; }
+.ring svg { display: block; }
+.ring circle:nth-child(2) { transition: stroke-dasharray .6s ease; }
+.ring-inner { position: absolute; inset: 0; display: grid; place-items: center; }
+.trust .trust-num { font-size: 44px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; }
+.trust .trust-num small { font-size: var(--fs-xs); margin-left: 2px; }
+.trust-label { font-size: var(--fs-lg); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.trust-verdict { max-width: 46ch; }
+
+/* one thin indicator under every metric */
+.meter { display: block; height: 4px; border-radius: 2px; background: var(--subtle); overflow: hidden; }
+.meter > i { display: block; height: 100%; border-radius: 2px; transition: width .5s ease; }
+
+.sub { padding: var(--s4) 0; }
+.sub summary { display: block; }
+.sub-row { display: flex; align-items: baseline; gap: var(--s3); margin-bottom: var(--s2); }
+.sub-row .sub-name { flex: 1; font-weight: 600; }
+.sub-val { font-size: var(--fs-md); font-variant-numeric: tabular-nums; min-width: 2.5ch; text-align: right; }
+.sub-body { padding: var(--s4) 0 0; }
+.comp { display: grid; grid-template-columns: 200px 1fr 40px; column-gap: var(--s3); row-gap: 6px; align-items: baseline; padding: var(--s3) 0; }
+.comp .meter { grid-column: 1 / -1; height: 3px; }
+.comp-val { text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 720px) {
+  .trust { padding: var(--s4); }
+  .trust-head { flex-direction: column; align-items: flex-start; }
+  .comp { grid-template-columns: 1fr 40px; }
+  .comp > .muted { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .meter > i, .ring circle { transition: none !important; } }

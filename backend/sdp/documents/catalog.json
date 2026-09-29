@@ -1,0 +1,14 @@
+[
+  {"description": "Consulting hour", "category": "services", "min": 60, "max": 220, "step": "0.5"},
+  {"description": "Software licence (annual)", "category": "software", "min": 90, "max": 900, "step": "1"},
+  {"description": "Cloud hosting (monthly)", "category": "software", "min": 20, "max": 400, "step": "1"},
+  {"description": "Laptop stand", "category": "hardware", "min": 25, "max": 90, "step": "1"},
+  {"description": "Wireless keyboard", "category": "hardware", "min": 30, "max": 140, "step": "1"},
+  {"description": "27-inch monitor", "category": "hardware", "min": 180, "max": 650, "step": "1"},
+  {"description": "Printer paper (ream)", "category": "office", "min": 4, "max": 12, "step": "1"},
+  {"description": "Ink cartridge", "category": "office", "min": 15, "max": 70, "step": "1"},
+  {"description": "Team lunch catering", "category": "food", "min": 80, "max": 400, "step": "1"},
+  {"description": "Coffee beans (1 kg)", "category": "food", "min": 12, "max": 40, "step": "1"},
+  {"description": "Technical handbook", "category": "books", "min": 18, "max": 90, "step": "1"},
+  {"description": "Training workshop seat", "category": "services", "min": 150, "max": 800, "step": "1"}
+]

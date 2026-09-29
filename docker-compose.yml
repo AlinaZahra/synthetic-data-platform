@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    image: sdp:latest
+    ports:
+      - "8000:8000"
+    environment:
+      # API key(s) for POST /generate, GET /jobs/{id}, GET /score/{id}. If unset, one ephemeral key is generated and printed in the logs.
+      SDP_API_KEYS: ${SDP_API_KEYS:-}
+      # Drop extra locale JSON files into ./locales to add locales without rebuilding (see backend/sdp/locale/packs/*.json for the format)
+      SDP_LOCALE_DIR: /locales
+    volumes:
+      - ./locales:/locales:ro
+      - sdp-data:/data          # job manifests, outputs and lineage survive restarts
+    restart: unless-stopped
+
+volumes:
+  sdp-data:

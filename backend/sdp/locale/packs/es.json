@@ -1,0 +1,144 @@
+{
+ "code": "es",
+ "language": "es",
+ "country": "ES",
+ "script": "Latin",
+ "aliases": [
+  "spanish",
+  "spain",
+  "español"
+ ],
+ "names": {
+  "first_male": [
+   "Javier",
+   "Carlos",
+   "Miguel",
+   "Alejandro",
+   "Pablo",
+   "Diego",
+   "Sergio",
+   "Andrés"
+  ],
+  "first_female": [
+   "Lucía",
+   "María",
+   "Carmen",
+   "Elena",
+   "Paula",
+   "Marta",
+   "Sofía",
+   "Isabel"
+  ],
+  "last": [
+   "García",
+   "Rodríguez",
+   "Martínez",
+   "López",
+   "Sánchez",
+   "Pérez",
+   "Gómez",
+   "Fernández"
+  ]
+ },
+ "address": {
+  "format": "Calle {street} {number}, {postal} {city}",
+  "streets": [
+   "Mayor",
+   "del Sol",
+   "Real",
+   "Nueva",
+   "de la Paz",
+   "Ancha"
+  ],
+  "cities": [
+   "Madrid",
+   "Sevilla",
+   "Valencia",
+   "Bilbao",
+   "Zaragoza",
+   "Málaga"
+  ],
+  "postal_pattern": "#####"
+ },
+ "phone": {
+  "pattern": "+34 6## ### ###",
+  "regex": "^\\+34 [67]\\d{2} \\d{3} \\d{3}$"
+ },
+ "national_id": {
+  "name": "DNI",
+  "pattern": "########{check}",
+  "regex": "^\\d{8}[A-Z]$",
+  "checksum": "dni"
+ },
+ "currency": {
+  "code": "EUR",
+  "symbol": "€",
+  "position": "after",
+  "space": true,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ",",
+  "thousands": ".",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%d/%m/%Y"
+ },
+ "tax": {
+  "label": "IVA",
+  "default_rate": "0.21",
+  "regions": {
+   "ES": "0.21",
+   "CN": "0.07"
+  },
+  "category_rates": {
+   "food": "0.10",
+   "books": "0.04"
+  }
+ },
+ "scale": {
+  "price_factor": "0.92",
+  "income_median": "2000"
+ },
+ "labels": {
+  "invoice_title": "FACTURA",
+  "receipt_title": "RECIBO",
+  "statement_title": "EXTRACTO DE CUENTA",
+  "bill_to": "Facturar a",
+  "issued": "Emitida",
+  "due": "Vencimiento",
+  "page": "Página",
+  "description": "Descripción",
+  "qty": "Cant.",
+  "unit_price": "Precio unitario",
+  "amount": "Importe",
+  "subtotal": "Subtotal",
+  "total": "Total",
+  "tax": "Impuesto",
+  "prices_include_tax": "Precios con impuestos incluidos.",
+  "currency": "Moneda",
+  "seller_tax_id": "NIF",
+  "payment_method": "Método de pago",
+  "date": "Fecha",
+  "balance": "Saldo",
+  "debit": "Débito",
+  "credit": "Crédito",
+  "opening_balance": "Saldo inicial",
+  "closing_balance": "Saldo final",
+  "account": "Cuenta",
+  "thank_you": "Gracias",
+  "tendered": "Entregado",
+  "change": "Cambio",
+  "period": "Periodo",
+  "cash": "Efectivo",
+  "card": "Tarjeta"
+ },
+ "pdf": {
+  "direction": "ltr",
+  "font_script": "latin",
+  "reshape": false,
+  "complex_shaping": false
+ },
+ "email_host": "mail.es.example"
+}

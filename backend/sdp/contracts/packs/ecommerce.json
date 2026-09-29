@@ -1,0 +1,254 @@
+{
+ "name": "ecommerce",
+ "title": "E-commerce",
+ "description": "Customers, products, orders, line items and shipments that reconcile.",
+ "generator": "ecommerce",
+ "default_locale": "en-US",
+ "default_rows": 300,
+ "tables": [
+  "customers",
+  "products",
+  "orders",
+  "order_items",
+  "shipments"
+ ],
+ "expectations": [
+  {
+   "expectation_type": "expect_table_row_count_to_be_between",
+   "table": "customers",
+   "kwargs": {
+    "min_value": 10
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "customers",
+   "kwargs": {
+    "column": "customer_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "customers",
+   "kwargs": {
+    "column": "customer_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "products",
+   "kwargs": {
+    "column": "product_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "products",
+   "kwargs": {
+    "column": "product_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "orders",
+   "kwargs": {
+    "column": "order_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "orders",
+   "kwargs": {
+    "column": "order_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "order_items",
+   "kwargs": {
+    "column": "item_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "order_items",
+   "kwargs": {
+    "column": "item_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "shipments",
+   "kwargs": {
+    "column": "shipment_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "shipments",
+   "kwargs": {
+    "column": "shipment_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "customers",
+   "kwargs": {
+    "column": "segment",
+    "value_set": [
+     "smb",
+     "retail",
+     "corp"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "products",
+   "kwargs": {
+    "column": "price",
+    "min_value": 0,
+    "strict_min": true
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "orders",
+   "kwargs": {
+    "column": "customer_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "orders",
+   "kwargs": {
+    "column": "customer_id",
+    "ref_table": "customers",
+    "ref_column": "customer_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "order_items",
+   "kwargs": {
+    "column": "order_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "order_items",
+   "kwargs": {
+    "column": "order_id",
+    "ref_table": "orders",
+    "ref_column": "order_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "order_items",
+   "kwargs": {
+    "column": "product_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "order_items",
+   "kwargs": {
+    "column": "product_id",
+    "ref_table": "products",
+    "ref_column": "product_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "shipments",
+   "kwargs": {
+    "column": "order_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "shipments",
+   "kwargs": {
+    "column": "order_id",
+    "ref_table": "orders",
+    "ref_column": "order_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "orders",
+   "kwargs": {
+    "column": "status",
+    "value_set": [
+     "placed",
+     "shipped",
+     "delivered",
+     "cancelled"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "orders",
+   "kwargs": {
+    "column": "discount",
+    "min_value": 0,
+    "max_value": 1
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "orders",
+   "kwargs": {
+    "column": "total",
+    "min_value": 0
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "order_items",
+   "kwargs": {
+    "column": "quantity",
+    "min_value": 1
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_equal_sum_of_child_values",
+   "table": "orders",
+   "kwargs": {
+    "column": "total",
+    "key": "order_id",
+    "child_table": "order_items",
+    "child_key": "order_id",
+    "child_value": "unit_price",
+    "child_multiplier": "quantity",
+    "tolerance": 0.02
+   },
+   "meta": {
+    "description": "order total equals the sum of its line items"
+   }
+  },
+  {
+   "expectation_type": "expect_column_pair_values_a_to_be_greater_than_b",
+   "table": "shipments",
+   "kwargs": {
+    "column_A": "delivered_date",
+    "column_B": "shipped_date",
+    "or_equal": true
+   }
+  }
+ ]
+}

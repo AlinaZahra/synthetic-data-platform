@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 1.6cm; }
+  body { font-family: Helvetica; font-size: 9.5pt; color: #1c1917; }
+  h1 { font-size: 20pt; margin: 0; }
+  h2 { font-size: 9pt; margin: 12pt 0 3pt 0; color: #57534e; text-transform: uppercase; }
+  .muted { color: #78716c; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; border-bottom: 1pt solid #a8a29e; padding: 4pt 2pt; font-size: 8.5pt; color: #57534e; }
+  td { padding: 3pt 2pt; border-bottom: 0.5pt solid #e7e5e4; }
+  .r { text-align: right; }
+  .plain td { border: none; }
+  .total td { font-weight: bold; font-size: 11pt; border-top: 1pt solid #1c1917; border-bottom: none; }
+</style>
+</head>
+<body>
+  <table class="plain">
+    <tr><td><h1>Purchase order</h1><div class="muted">{{ doc.po_number }}</div></td>
+        <td class="r">Order date {{ doc.order_date | date }}<br/>Delivery by {{ doc.delivery_date | date }}<br/><span class="muted">Terms: {{ doc.payment_terms }}</span></td></tr>
+  </table>
+  <table class="plain">
+    <tr><td style="width:50%"><h2>Buyer</h2><b>{{ doc.buyer.name }}</b><br/>{{ doc.buyer.address }}<br/><span class="muted">{{ tax_label }} ID {{ doc.buyer.tax_id }}</span></td>
+        <td><h2>Supplier</h2><b>{{ doc.supplier.name }}</b><br/>{{ doc.supplier.address }}<br/><span class="muted">{{ tax_label }} ID {{ doc.supplier.tax_id }}</span></td></tr>
+  </table>
+
+  <h2>Items</h2>
+  <table>
+    <tr><th>Description</th><th class="r">Qty</th><th class="r">Unit price</th><th class="r">Amount</th></tr>
+    {% for r in doc['items'] %}<tr><td>{{ r.description }}</td><td class="r">{{ r.quantity }}</td><td class="r">{{ r.unit_price | money }}</td><td class="r">{{ r.line_total | money }}</td></tr>{% endfor %}
+  </table>
+  <br/>
+  <table class="plain">
+    <tr><td style="width:55%"></td><td>Subtotal</td><td class="r">{{ doc.subtotal | money }}</td></tr>
+    {% if doc.discount != '0.00' %}<tr><td></td><td>Discount ({{ doc.discount_pct | pct }})</td><td class="r">-{{ doc.discount | money }}</td></tr>{% endif %}
+    <tr><td></td><td>{{ tax_label }}</td><td class="r">{{ doc.tax | money }}</td></tr>
+    <tr><td></td><td>Shipping</td><td class="r">{{ doc.shipping | money }}</td></tr>
+    <tr class="total"><td></td><td>Total ({{ currency }})</td><td class="r">{{ doc.total | money }}</td></tr>
+  </table>
+  <p class="muted" style="margin-top:18pt">Approved by {{ doc.approver.name }}. Fictional document generated for testing. {{ doc.document_id }}</p>
+</body>
+</html>

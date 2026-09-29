@@ -1,0 +1,265 @@
+{
+ "code": "hi",
+ "language": "hi",
+ "country": "IN",
+ "script": "Devanagari",
+ "aliases": [
+  "indian",
+  "india",
+  "hindi"
+ ],
+ "names": {
+  "first_male": [
+   "राहुल",
+   "अमित",
+   "विजय",
+   "सुरेश",
+   "अनिल",
+   "रोहित",
+   "संजय",
+   "मनीष"
+  ],
+  "first_female": [
+   "प्रिया",
+   "अनीता",
+   "सुनीता",
+   "पूजा",
+   "नेहा",
+   "कविता",
+   "रीता",
+   "स्नेहा"
+  ],
+  "last": [
+   "शर्मा",
+   "वर्मा",
+   "गुप्ता",
+   "सिंह",
+   "पटेल",
+   "यादव",
+   "मिश्रा",
+   "जोशी"
+  ]
+ },
+ "names_latin": {
+  "first_male": [
+   "Rahul",
+   "Amit",
+   "Vijay",
+   "Suresh",
+   "Anil",
+   "Rohit"
+  ],
+  "first_female": [
+   "Priya",
+   "Anita",
+   "Sunita",
+   "Pooja",
+   "Neha",
+   "Kavita"
+  ],
+  "last": [
+   "Sharma",
+   "Verma",
+   "Gupta",
+   "Singh",
+   "Patel",
+   "Yadav"
+  ]
+ },
+ "address": {
+  "format": "{number} {street}, {city} {postal}",
+  "streets": [
+   "MG Road",
+   "Station Road",
+   "Gandhi Marg",
+   "Nehru Nagar",
+   "Park Street",
+   "Temple Road"
+  ],
+  "cities": [
+   "Delhi",
+   "Mumbai",
+   "Pune",
+   "Jaipur",
+   "Lucknow",
+   "Chennai"
+  ],
+  "postal_pattern": "######"
+ },
+ "phone": {
+  "pattern": "+91 [6-9]#### #####",
+  "regex": "^\\+91 [6-9]\\d{4} \\d{5}$"
+ },
+ "national_id": {
+  "name": "Aadhaar",
+  "pattern": "[2-9]### #### ###{check}",
+  "regex": "^[2-9]\\d{3} \\d{4} \\d{4}$",
+  "checksum": "verhoeff"
+ },
+ "currency": {
+  "code": "INR",
+  "symbol": "₹",
+  "position": "before",
+  "space": false,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": "indian"
+ },
+ "date": {
+  "format": "%d-%m-%Y"
+ },
+ "tax": {
+  "label": "GST",
+  "default_rate": "0.18",
+  "regions": {
+   "KA": "0.18",
+   "MH": "0.18",
+   "DL": "0.18"
+  },
+  "category_rates": {
+   "food": "0.05",
+   "books": "0"
+  },
+  "label_native": "जीएसटी"
+ },
+ "scale": {
+  "price_factor": "83",
+  "income_median": "40000"
+ },
+ "labels": {
+  "invoice_title": "चालान",
+  "receipt_title": "रसीद",
+  "statement_title": "खाता विवरण",
+  "bill_to": "बिल प्राप्तकर्ता",
+  "issued": "जारी करने की तिथि",
+  "due": "देय तिथि",
+  "page": "पृष्ठ",
+  "description": "विवरण",
+  "qty": "मात्रा",
+  "unit_price": "इकाई मूल्य",
+  "amount": "राशि",
+  "subtotal": "उप-योग",
+  "total": "कुल",
+  "tax": "कर",
+  "prices_include_tax": "कीमतों में कर शामिल है",
+  "currency": "मुद्रा",
+  "seller_tax_id": "कर आईडी",
+  "payment_method": "भुगतान विधि",
+  "date": "तिथि",
+  "balance": "शेष",
+  "debit": "डेबिट",
+  "credit": "क्रेडिट",
+  "opening_balance": "प्रारंभिक शेष",
+  "closing_balance": "अंतिम शेष",
+  "account": "खाता",
+  "thank_you": "धन्यवाद",
+  "tendered": "प्राप्त राशि",
+  "change": "वापसी",
+  "period": "अवधि",
+  "cash": "नकद",
+  "card": "कार्ड"
+ },
+ "pdf": {
+  "direction": "ltr",
+  "font_script": "devanagari",
+  "reshape": false,
+  "complex_shaping": true
+ },
+ "native_digits": {
+  "digits": "०१२३४५६७८९",
+  "decimal": ".",
+  "thousands": ","
+ },
+ "email_host": "mail.in.example",
+ "translit": {
+  "राहुल": [
+   "Rahul"
+  ],
+  "अमित": [
+   "Amit"
+  ],
+  "विजय": [
+   "Vijay",
+   "Vijaya"
+  ],
+  "सुरेश": [
+   "Suresh"
+  ],
+  "अनिल": [
+   "Anil"
+  ],
+  "रोहित": [
+   "Rohit"
+  ],
+  "संजय": [
+   "Sanjay",
+   "Sanjai"
+  ],
+  "मनीष": [
+   "Manish",
+   "Maneesh"
+  ],
+  "प्रिया": [
+   "Priya",
+   "Preeya"
+  ],
+  "अनीता": [
+   "Anita",
+   "Aneeta"
+  ],
+  "सुनीता": [
+   "Sunita",
+   "Suneeta"
+  ],
+  "पूजा": [
+   "Pooja",
+   "Puja"
+  ],
+  "नेहा": [
+   "Neha"
+  ],
+  "कविता": [
+   "Kavita",
+   "Kavitha"
+  ],
+  "रीता": [
+   "Rita",
+   "Reeta"
+  ],
+  "स्नेहा": [
+   "Sneha",
+   "Snehaa"
+  ],
+  "शर्मा": [
+   "Sharma"
+  ],
+  "वर्मा": [
+   "Verma",
+   "Varma"
+  ],
+  "गुप्ता": [
+   "Gupta"
+  ],
+  "सिंह": [
+   "Singh",
+   "Sinh"
+  ],
+  "पटेल": [
+   "Patel"
+  ],
+  "यादव": [
+   "Yadav"
+  ],
+  "मिश्रा": [
+   "Mishra",
+   "Misra"
+  ],
+  "जोशी": [
+   "Joshi",
+   "Joshy"
+  ]
+ }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "retail_receipt",
+  "title": "Receipt (HTML template)",
+  "template": "template.html",
+  "params": {"n_lines": {"default": 4, "min": 1, "max": 30}},
+  "required": ["merchant.name", "receipt_no", "date", "total"],
+  "build": [
+    {"name": "merchant", "kind": "company", "suffixes": ["Market", "Store", "Mart", "Supplies"]},
+    {"name": "receipt_no", "kind": "id", "prefix": "R-", "digits": 8},
+    {"name": "date", "kind": "date", "start": "2025-01-01", "end": "2025-12-31"},
+    {"name": "cashier", "kind": "choice", "values": ["Sam", "Alex", "Jordan", "Riley", "Casey"]},
+    {"name": "register", "kind": "choice", "values": ["Till 1", "Till 2", "Till 3"]},
+    {"name": "items", "kind": "group", "param": "n_lines", "count": [2, 8], "source": "catalog",
+     "fields": {"quantity": {"kind": "int", "min": 1, "max": 4}},
+     "row_computed": {"line_total": "round(quantity * unit_price)"},
+     "types": {"quantity": "int", "unit_price": "money", "line_total": "money"}},
+    {"name": "subtotal", "kind": "computed", "expr": "sum(items, 'line_total')"},
+    {"name": "tax", "kind": "computed", "expr": "pct(subtotal, tax_rate)"},
+    {"name": "total", "kind": "computed", "expr": "subtotal + tax"},
+    {"name": "payment", "kind": "choice", "values": ["cash", "card"]},
+    {"name": "tendered", "kind": "expr", "type": "money", "expr": "ceil_to(total, 5) if payment == 'cash' else total"},
+    {"name": "change", "kind": "computed", "expr": "tendered - total"}
+  ],
+  "rules": [
+    {"name": "lines add up to the subtotal", "expr": "subtotal == sum(items, 'line_total')"},
+    {"name": "total equals subtotal plus tax", "expr": "total == subtotal + tax"},
+    {"name": "tendered covers the total", "expr": "tendered >= total"},
+    {"name": "change is tendered minus total", "expr": "change == tendered - total and change >= 0"}
+  ]
+}

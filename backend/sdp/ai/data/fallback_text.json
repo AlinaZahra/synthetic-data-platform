@@ -1,0 +1,48 @@
+{
+  "_note": "Hand-written offline templates for free text. Needs a fluent-speaker review for es and fr. Other locales fall back to en.",
+  "en": {
+    "default_product": "item", "default_city": "town",
+    "review": {
+      "positive": {"open": ["Really happy with the {product}.", "The {product} exceeded my expectations.", "Great {product}, would buy again.", "Very pleased with this {product}."],
+                   "detail": ["It arrived quickly and was well packed.", "Build quality feels solid.", "Setup took only a few minutes.", "Support answered all my questions.", "Works exactly as described."],
+                   "close": ["Highly recommended.", "Five stars from me.", "Good value for the price."]},
+      "neutral": {"open": ["The {product} is fine.", "Decent {product}, nothing special.", "The {product} does the job."],
+                  "detail": ["Delivery was on time.", "A few small things could be better.", "It matches the description mostly.", "Packaging was average."],
+                  "close": ["Okay for the price.", "Might consider it again.", "Three stars."]},
+      "negative": {"open": ["Disappointed with the {product}.", "The {product} did not meet my expectations.", "I would not buy this {product} again.", "The {product} stopped working."],
+                   "detail": ["It arrived late and the box was damaged.", "The quality is poor.", "Nobody replied to my messages.", "It looks different from the photos.", "The instructions were confusing."],
+                   "close": ["I asked for a refund.", "Not recommended.", "One star."]}
+    },
+    "description": {"open": ["The {product} is designed for everyday use.", "A practical {product} for busy households.", "Our {product} combines simple design with reliable parts."],
+                    "detail": ["Available in several sizes.", "Made with durable materials.", "Easy to clean and maintain.", "Comes with a one-year warranty.", "Lightweight and easy to store."],
+                    "close": ["Ships within two working days.", "A dependable choice for the home.", "Popular with customers in {city}."]},
+    "ticket": {"open": {"low": ["Hello, a quick question about my account.", "Hi, I noticed a small issue."], "medium": ["Hello, I am having trouble with my {product}.", "Hi, something is not working as expected."],
+                        "high": ["Urgent: my {product} has stopped working.", "This is blocking my work and needs attention today."]},
+               "detail": ["I tried restarting it but the problem came back.", "The error appears every time I sign in.", "I was charged twice for the same order.", "The page freezes when I open my order history.", "My last payment is not showing in the account."],
+               "close": ["Please advise on the next steps.", "Could someone from support call me back?", "Thank you for your help.", "I can share screenshots if needed."]}
+  },
+  "es": {
+    "default_product": "producto", "default_city": "la ciudad",
+    "review": {
+      "positive": {"open": ["Muy contento con el {product}.", "El {product} superó mis expectativas.", "Excelente {product}, volvería a comprarlo."],
+                   "detail": ["Llegó rápido y bien embalado.", "La calidad se nota sólida.", "Funciona tal como se describe."], "close": ["Muy recomendable.", "Cinco estrellas.", "Buena relación calidad-precio."]},
+      "neutral": {"open": ["El {product} está bien.", "Un {product} correcto, sin más."], "detail": ["La entrega fue puntual.", "Algunos detalles podrían mejorar."], "close": ["Aceptable por el precio.", "Tres estrellas."]},
+      "negative": {"open": ["Decepcionado con el {product}.", "El {product} no cumplió mis expectativas."], "detail": ["Llegó tarde y la caja estaba dañada.", "La calidad es baja.", "Nadie respondió a mis mensajes."], "close": ["Pedí un reembolso.", "No lo recomiendo."]}
+    },
+    "description": {"open": ["El {product} está pensado para el uso diario.", "Un {product} práctico para el hogar."], "detail": ["Disponible en varios tamaños.", "Fabricado con materiales duraderos.", "Fácil de limpiar."], "close": ["Envío en dos días laborables.", "Popular entre los clientes de {city}."]},
+    "ticket": {"open": {"low": ["Hola, una consulta rápida sobre mi cuenta."], "medium": ["Hola, tengo un problema con mi {product}."], "high": ["Urgente: mi {product} ha dejado de funcionar."]},
+               "detail": ["Lo reinicié pero el problema vuelve.", "Me cobraron dos veces el mismo pedido.", "El error aparece cada vez que inicio sesión."], "close": ["¿Pueden indicarme los siguientes pasos?", "Gracias por su ayuda."]}
+  },
+  "fr": {
+    "default_product": "produit", "default_city": "la ville",
+    "review": {
+      "positive": {"open": ["Très satisfait du {product}.", "Le {product} a dépassé mes attentes.", "Excellent {product}, je le rachèterais."],
+                   "detail": ["Livré rapidement et bien emballé.", "La qualité de fabrication est solide.", "Il fonctionne comme décrit."], "close": ["Je recommande vivement.", "Cinq étoiles.", "Bon rapport qualité-prix."]},
+      "neutral": {"open": ["Le {product} est correct.", "Un {product} honnête, sans plus."], "detail": ["La livraison était dans les temps.", "Quelques détails pourraient être améliorés."], "close": ["Correct pour le prix.", "Trois étoiles."]},
+      "negative": {"open": ["Déçu par le {product}.", "Le {product} n'a pas répondu à mes attentes."], "detail": ["Il est arrivé en retard et le carton était abîmé.", "La qualité est médiocre.", "Personne n'a répondu à mes messages."], "close": ["J'ai demandé un remboursement.", "Je ne le recommande pas."]}
+    },
+    "description": {"open": ["Le {product} est conçu pour un usage quotidien.", "Un {product} pratique pour la maison."], "detail": ["Disponible en plusieurs tailles.", "Fabriqué avec des matériaux durables.", "Facile à nettoyer."], "close": ["Expédié sous deux jours ouvrés.", "Très apprécié des clients de {city}."]},
+    "ticket": {"open": {"low": ["Bonjour, une question rapide sur mon compte."], "medium": ["Bonjour, j'ai un problème avec mon {product}."], "high": ["Urgent : mon {product} ne fonctionne plus."]},
+               "detail": ["Je l'ai redémarré mais le problème revient.", "J'ai été débité deux fois pour la même commande.", "L'erreur apparaît à chaque connexion."], "close": ["Pouvez-vous m'indiquer la marche à suivre ?", "Merci de votre aide."]}
+  }
+}

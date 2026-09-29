@@ -1,0 +1,147 @@
+{
+ "code": "en-GB",
+ "language": "en",
+ "country": "GB",
+ "script": "Latin",
+ "aliases": [
+  "british",
+  "uk",
+  "united kingdom",
+  "england",
+  "britain",
+  "english"
+ ],
+ "names": {
+  "first_male": [
+   "Oliver",
+   "George",
+   "Harry",
+   "Jack",
+   "Oscar",
+   "Charlie",
+   "Thomas",
+   "William"
+  ],
+  "first_female": [
+   "Olivia",
+   "Amelia",
+   "Isla",
+   "Ava",
+   "Emily",
+   "Sophie",
+   "Grace",
+   "Charlotte"
+  ],
+  "last": [
+   "Smith",
+   "Taylor",
+   "Brown",
+   "Evans",
+   "Thomas",
+   "Roberts",
+   "Walker",
+   "Wright"
+  ]
+ },
+ "address": {
+  "format": "{number} {street}, {city} {postal}",
+  "streets": [
+   "High Street",
+   "Station Road",
+   "Church Lane",
+   "Park Road",
+   "Mill Lane",
+   "Victoria Road"
+  ],
+  "cities": [
+   "Leeds",
+   "Bristol",
+   "Norwich",
+   "Cardiff",
+   "Glasgow",
+   "York"
+  ],
+  "postal_pattern": "[A-Z][A-Z]# #[A-Z][A-Z]"
+ },
+ "phone": {
+  "pattern": "+44 7700 900###",
+  "regex": "^\\+44 7700 900\\d{3}$"
+ },
+ "national_id": {
+  "name": "NINO",
+  "pattern": "[ABCEGHJKLMNPRSTWXYZ][ABCEGHJKLMNPRSTWXYZ]######[ABCD]",
+  "regex": "^[A-CEGHJ-PR-TW-Z][A-CEGHJ-NPR-TW-Z]\\d{6}[A-D]$",
+  "checksum": null
+ },
+ "currency": {
+  "code": "GBP",
+  "symbol": "£",
+  "position": "before",
+  "space": false,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%d/%m/%Y"
+ },
+ "tax": {
+  "label": "VAT",
+  "default_rate": "0.20",
+  "regions": {
+   "GB": "0.20",
+   "NI": "0.20"
+  },
+  "category_rates": {
+   "food": "0",
+   "books": "0"
+  }
+ },
+ "scale": {
+  "price_factor": "0.79",
+  "income_median": "2800"
+ },
+ "labels": {
+  "invoice_title": "INVOICE",
+  "receipt_title": "RECEIPT",
+  "statement_title": "ACCOUNT STATEMENT",
+  "bill_to": "Bill to",
+  "issued": "Issued",
+  "due": "Due",
+  "page": "Page",
+  "description": "Description",
+  "qty": "Qty",
+  "unit_price": "Unit price",
+  "amount": "Amount",
+  "subtotal": "Subtotal",
+  "total": "Total",
+  "tax": "VAT",
+  "prices_include_tax": "Prices include VAT.",
+  "currency": "Currency",
+  "seller_tax_id": "VAT number",
+  "payment_method": "Payment method",
+  "date": "Date",
+  "balance": "Balance",
+  "debit": "Debit",
+  "credit": "Credit",
+  "opening_balance": "Opening balance",
+  "closing_balance": "Closing balance",
+  "account": "Account",
+  "thank_you": "Thank you",
+  "tendered": "Tendered",
+  "change": "Change",
+  "period": "Period",
+  "cash": "Cash",
+  "card": "Card"
+ },
+ "pdf": {
+  "direction": "ltr",
+  "font_script": "latin",
+  "reshape": false,
+  "complex_shaping": false
+ },
+ "email_host": "mail.uk.example"
+}

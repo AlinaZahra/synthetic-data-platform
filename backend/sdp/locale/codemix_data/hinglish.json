@@ -1,0 +1,56 @@
+{
+  "name": "hinglish",
+  "label": "Hinglish (Hindi + English)",
+  "locale": "hi",
+  "fillers": {"base": ["yaar", "bhai"], "en": ["actually", "basically", "sorry", "anyway"]},
+  "topics": {
+    "banking": {
+      "lexicon": {
+        "account": {"b": "khata", "e": "account"}, "block": {"b": "band", "e": "block"}, "please": {"b": "kripya", "e": "please"},
+        "fix": {"b": "theek", "e": "fix"}, "balance": {"b": "baaki rashi", "e": "balance"}, "check": {"b": "pata", "e": "check"},
+        "transfer": {"b": "sthanantar", "e": "transfer"}, "amount": {"b": "rashi", "e": "amount"}, "statement": {"b": "vivaran", "e": "statement"},
+        "today": {"b": "aaj", "e": "today"}, "branch": {"b": "shakha", "e": "branch"}
+      },
+      "templates": [
+        "Mera {account} {block} ho gaya hai, {please} ise jaldi {fix} karo",
+        "Mujhe {balance} {check} karna hai",
+        "Mujhe {amount} {transfer} karna hai",
+        "{account} mein dikkat hai, {please} madad karo",
+        "Mujhe {today} {statement} chahiye",
+        "{branch} kab khulti hai?"
+      ]
+    },
+    "shopping": {
+      "lexicon": {
+        "order": {"b": "aadesh", "e": "order"}, "delivery": {"b": "saman aane", "e": "delivery"}, "refund": {"b": "paise wapsi", "e": "refund"},
+        "product": {"b": "saman", "e": "product"}, "discount": {"b": "chhoot", "e": "discount"}, "cancel": {"b": "radd", "e": "cancel"},
+        "return": {"b": "wapas", "e": "return"}, "please": {"b": "kripya", "e": "please"}, "price": {"b": "daam", "e": "price"}
+      },
+      "templates": [
+        "Mujhe apne {order} ke baare mein poochna hai",
+        "{product} mein dikkat hai, mujhe {refund} chahiye",
+        "Kya main yeh {product} {return} kar sakta hoon?",
+        "Is {product} par {discount} milega?",
+        "Mujhe {order} {cancel} karna hai",
+        "{delivery} mein deri ho rahi hai, {please} jaldi karo",
+        "Mujhe is {product} ke {price} ke baare mein batao"
+      ]
+    },
+    "support": {
+      "lexicon": {
+        "app": {"b": "app", "e": "app"}, "login": {"b": "pravesh", "e": "login"}, "problem": {"b": "samasya", "e": "problem"},
+        "please": {"b": "kripya", "e": "please"}, "fix": {"b": "theek", "e": "fix"}, "password": {"b": "guptshabd", "e": "password"},
+        "reset": {"b": "dobara set", "e": "reset"}, "agent": {"b": "pratinidhi", "e": "agent"}, "ticket": {"b": "shikayat", "e": "ticket"},
+        "service": {"b": "seva", "e": "service"}
+      },
+      "templates": [
+        "{app} mein {login} ki {problem} hai, {please} {fix} karo",
+        "Mujhe {password} {reset} karna hai",
+        "Meri {ticket} par koi jawab nahi aaya",
+        "Mujhe {agent} se baat karni hai",
+        "{service} bahut kharab hai, {please} jawab do",
+        "{login} karte samay {problem} aa rahi hai"
+      ]
+    }
+  }
+}

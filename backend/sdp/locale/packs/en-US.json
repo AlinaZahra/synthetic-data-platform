@@ -1,0 +1,148 @@
+{
+ "code": "en-US",
+ "language": "en",
+ "country": "US",
+ "script": "Latin",
+ "aliases": [
+  "american",
+  "us",
+  "usa",
+  "united states",
+  "america"
+ ],
+ "names": {
+  "first_male": [
+   "James",
+   "Michael",
+   "Robert",
+   "David",
+   "Daniel",
+   "Matthew",
+   "Andrew",
+   "Joseph"
+  ],
+  "first_female": [
+   "Mary",
+   "Jennifer",
+   "Linda",
+   "Sarah",
+   "Emily",
+   "Karen",
+   "Laura",
+   "Anna"
+  ],
+  "last": [
+   "Smith",
+   "Johnson",
+   "Williams",
+   "Brown",
+   "Jones",
+   "Miller",
+   "Davis",
+   "Wilson"
+  ]
+ },
+ "address": {
+  "format": "{number} {street}, {city} {postal}",
+  "streets": [
+   "Maple St",
+   "Oak Ave",
+   "Pine Rd",
+   "Cedar Ln",
+   "Elm St",
+   "Lake Dr"
+  ],
+  "cities": [
+   "Austin, TX",
+   "Portland, OR",
+   "Albany, NY",
+   "Fresno, CA",
+   "Seattle, WA",
+   "Denver, CO"
+  ],
+  "postal_pattern": "#####"
+ },
+ "phone": {
+  "pattern": "+1 (###) 555-01##",
+  "regex": "^\\+1 \\(\\d{3}\\) 555-01\\d{2}$"
+ },
+ "national_id": {
+  "name": "SSN-style (synthetic 9xx range)",
+  "pattern": "9##-##-####",
+  "regex": "^9\\d{2}-\\d{2}-\\d{4}$",
+  "checksum": null
+ },
+ "currency": {
+  "code": "USD",
+  "symbol": "$",
+  "position": "before",
+  "space": false,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%m/%d/%Y"
+ },
+ "tax": {
+  "label": "Sales Tax",
+  "default_rate": "0.07",
+  "regions": {
+   "CA": "0.0725",
+   "NY": "0.08875",
+   "TX": "0.0625",
+   "WA": "0.065",
+   "OR": "0"
+  },
+  "category_rates": {
+   "food": "0"
+  }
+ },
+ "scale": {
+  "price_factor": "1",
+  "income_median": "4500"
+ },
+ "labels": {
+  "invoice_title": "INVOICE",
+  "receipt_title": "RECEIPT",
+  "statement_title": "ACCOUNT STATEMENT",
+  "bill_to": "Bill to",
+  "issued": "Issued",
+  "due": "Due",
+  "page": "Page",
+  "description": "Description",
+  "qty": "Qty",
+  "unit_price": "Unit price",
+  "amount": "Amount",
+  "subtotal": "Subtotal",
+  "total": "Total",
+  "tax": "Tax",
+  "prices_include_tax": "Prices include tax.",
+  "currency": "Currency",
+  "seller_tax_id": "Tax ID",
+  "payment_method": "Payment method",
+  "date": "Date",
+  "balance": "Balance",
+  "debit": "Debit",
+  "credit": "Credit",
+  "opening_balance": "Opening balance",
+  "closing_balance": "Closing balance",
+  "account": "Account",
+  "thank_you": "Thank you",
+  "tendered": "Tendered",
+  "change": "Change",
+  "period": "Period",
+  "cash": "Cash",
+  "card": "Card"
+ },
+ "pdf": {
+  "direction": "ltr",
+  "font_script": "latin",
+  "reshape": false,
+  "complex_shaping": false
+ },
+ "email_host": "mail.us.example"
+}

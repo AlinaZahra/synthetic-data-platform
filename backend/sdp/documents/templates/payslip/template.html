@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 1.6cm; }
+  body { font-family: Helvetica; font-size: 9.5pt; color: #1c1917; }
+  h1 { font-size: 20pt; margin: 0; }
+  h2 { font-size: 10pt; margin: 14pt 0 4pt 0; color: #57534e; }
+  .muted { color: #78716c; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; border-bottom: 1pt solid #a8a29e; padding: 4pt 2pt; font-size: 8.5pt; color: #57534e; }
+  td { padding: 3pt 2pt; border-bottom: 0.5pt solid #e7e5e4; }
+  .r { text-align: right; }
+  .total td { font-weight: bold; border-top: 1pt solid #1c1917; border-bottom: none; }
+  .net td { font-size: 13pt; font-weight: bold; background-color: #f5f5f4; padding: 8pt 4pt; }
+</style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td style="border:none"><h1>Payslip</h1><div class="muted">{{ doc.pay_period.label }} &middot; paid {{ doc.pay_period.pay_date | date }}</div></td>
+      <td class="r" style="border:none"><b>{{ doc.employer.name }}</b><br/><span class="muted">{{ doc.employer.address }}<br/>{{ tax_label }} ID {{ doc.employer.tax_id }}</span></td>
+    </tr>
+  </table>
+
+  <h2>Employee</h2>
+  <table>
+    <tr><td style="width:50%"><b>{{ doc.employee.name }}</b><br/><span class="muted">{{ doc.employee.address }}</span></td>
+        <td>ID {{ doc.employee_id }}<br/>{{ doc.job_title }}, {{ doc.department }}<br/><span class="muted">Account {{ doc.bank_account }}</span></td></tr>
+  </table>
+
+  <h2>Earnings</h2>
+  <table>
+    <tr><th>Description</th><th class="r">Amount ({{ currency }})</th></tr>
+    {% for r in doc.earnings %}<tr><td>{{ r.description }}</td><td class="r">{{ r.amount | money }}</td></tr>{% endfor %}
+    <tr class="total"><td>Gross pay</td><td class="r">{{ doc.gross | money }}</td></tr>
+  </table>
+
+  <h2>Deductions</h2>
+  <table>
+    <tr><th>Description</th><th class="r">Amount ({{ currency }})</th></tr>
+    {% for r in doc.deductions %}<tr><td>{{ r.description }}</td><td class="r">{{ r.amount | money }}</td></tr>{% endfor %}
+    <tr class="total"><td>Total deductions</td><td class="r">{{ doc.total_deductions | money }}</td></tr>
+  </table>
+
+  <br/>
+  <table><tr class="net"><td>Net pay</td><td class="r">{{ doc.net_pay | money }}</td></tr></table>
+  <p class="muted" style="font-size:8pt">Fictional document generated for testing. Document {{ doc.document_id }}.</p>
+</body>
+</html>

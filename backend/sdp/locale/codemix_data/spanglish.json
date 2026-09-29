@@ -1,0 +1,55 @@
+{
+  "name": "spanglish",
+  "label": "Spanglish (Spanish + English)",
+  "locale": "es",
+  "fillers": {"base": ["oye", "mira"], "en": ["actually", "like", "sorry", "anyway"]},
+  "topics": {
+    "banking": {
+      "lexicon": {
+        "account": {"b": "cuenta", "e": "account"}, "block": {"b": "bloqueada", "e": "blocked"}, "please": {"b": "por favor", "e": "please"},
+        "fix": {"b": "arreglar", "e": "fix"}, "balance": {"b": "saldo", "e": "balance"}, "check": {"b": "revisar", "e": "check"},
+        "transfer": {"b": "transferir", "e": "transfer"}, "amount": {"b": "monto", "e": "amount"}, "statement": {"b": "estado de cuenta", "e": "statement"},
+        "today": {"b": "hoy", "e": "today"}, "branch": {"b": "sucursal", "e": "branch"}, "card": {"b": "tarjeta", "e": "card"}
+      },
+      "templates": [
+        "Mi {account} está {block}, ¿{please} puedes {fix} esto?",
+        "Necesito {check} mi {balance}",
+        "Quiero {transfer} el {amount} a otra {account}",
+        "¿Dónde está la {branch} más cercana?",
+        "Necesito mi {statement} de {today}",
+        "Perdí mi {card}, ¿{please} pueden bloquearla?"
+      ]
+    },
+    "shopping": {
+      "lexicon": {
+        "order": {"b": "pedido", "e": "order"}, "delivery": {"b": "entrega", "e": "delivery"}, "refund": {"b": "reembolso", "e": "refund"},
+        "product": {"b": "producto", "e": "product"}, "discount": {"b": "descuento", "e": "discount"}, "cancel": {"b": "cancelar", "e": "cancel"},
+        "return": {"b": "devolver", "e": "return"}, "please": {"b": "por favor", "e": "please"}, "price": {"b": "precio", "e": "price"}
+      },
+      "templates": [
+        "Mi {order} todavía no llega, ¿cuándo es la {delivery}?",
+        "El {product} llegó dañado, quiero un {refund}",
+        "¿Puedo {return} este {product}?",
+        "Quiero {cancel} mi {order}",
+        "¿Hay {discount} en este {product}?",
+        "La {delivery} tiene un retraso, {please} ayúdame",
+        "¿Cuál es el {price} de este {product}?"
+      ]
+    },
+    "support": {
+      "lexicon": {
+        "app": {"b": "aplicación", "e": "app"}, "login": {"b": "inicio de sesión", "e": "login"}, "problem": {"b": "problema", "e": "problem"},
+        "please": {"b": "por favor", "e": "please"}, "password": {"b": "contraseña", "e": "password"}, "reset": {"b": "restablecer", "e": "reset"},
+        "agent": {"b": "agente", "e": "agent"}, "ticket": {"b": "ticket", "e": "ticket"}, "service": {"b": "servicio", "e": "service"}
+      },
+      "templates": [
+        "La {app} tiene un {problem} con el {login}, {please} ayúdenme",
+        "Necesito {reset} mi {password}",
+        "Quiero hablar con un {agent}",
+        "Mi {ticket} no tiene respuesta todavía",
+        "El {problem} sigue igual, {please} ayúdame",
+        "El {service} es muy lento hoy"
+      ]
+    }
+  }
+}

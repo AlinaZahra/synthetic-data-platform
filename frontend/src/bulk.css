@@ -1,0 +1,8 @@
+/* bulk jobs, progress, template preview */
+.progress-head { display: flex; justify-content: space-between; margin-bottom: var(--s2); }
+.progress { height: 10px; background: var(--subtle); border-radius: 5px; overflow: hidden; }
+.progress > i { display: block; height: 100%; background: var(--accent); transition: width .3s ease; }
+.progress > i.stopped { background: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .progress > i { transition: none; } }
+.progress.mini { height: 6px; width: 110px; display: inline-block; vertical-align: middle; }
+.htmlframe { width: 100%; height: 720px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }

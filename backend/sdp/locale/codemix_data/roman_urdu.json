@@ -1,0 +1,56 @@
+{
+  "name": "roman_urdu",
+  "label": "Roman Urdu + English",
+  "locale": "ur-PK",
+  "fillers": {"base": ["yaar", "bhai"], "en": ["actually", "basically", "sorry", "anyway"]},
+  "topics": {
+    "banking": {
+      "lexicon": {
+        "account": {"b": "khata", "e": "account"}, "block": {"b": "band", "e": "block"}, "please": {"b": "meharbani karke", "e": "please"},
+        "fix": {"b": "theek", "e": "fix"}, "balance": {"b": "baqaya raqam", "e": "balance"}, "check": {"b": "maloom", "e": "check"},
+        "transfer": {"b": "muntaqil", "e": "transfer"}, "amount": {"b": "raqam", "e": "amount"}, "statement": {"b": "bayan", "e": "statement"},
+        "today": {"b": "aaj", "e": "today"}, "branch": {"b": "shaakh", "e": "branch"}
+      },
+      "templates": [
+        "Mera {account} {block} ho gaya hai, {please} isay jaldi {fix} karein",
+        "Mujhe {balance} {check} karna hai",
+        "Mujhe {amount} {transfer} karna hai",
+        "{account} mein masla hai, {please} madad karein",
+        "Mujhe {today} {statement} chahiye",
+        "{branch} kab khulti hai?"
+      ]
+    },
+    "shopping": {
+      "lexicon": {
+        "order": {"b": "farmaish", "e": "order"}, "delivery": {"b": "tarseel", "e": "delivery"}, "refund": {"b": "raqam ki wapsi", "e": "refund"},
+        "product": {"b": "cheez", "e": "product"}, "discount": {"b": "riayat", "e": "discount"}, "cancel": {"b": "mansookh", "e": "cancel"},
+        "return": {"b": "wapas", "e": "return"}, "please": {"b": "meharbani karke", "e": "please"}, "price": {"b": "qeemat", "e": "price"}
+      },
+      "templates": [
+        "Mujhe apne {order} ke baare mein poochna hai",
+        "{product} mein masla hai, mujhe {refund} chahiye",
+        "Kya main yeh {product} {return} kar sakta hoon?",
+        "Mujhe {discount} chahiye is {product} par",
+        "Mujhe {order} {cancel} karna hai",
+        "{delivery} mein deri ho rahi hai, {please} jaldi karein",
+        "Mujhe is {product} ki {price} ke baare mein batayein"
+      ]
+    },
+    "support": {
+      "lexicon": {
+        "app": {"b": "app", "e": "app"}, "login": {"b": "dakhla", "e": "login"}, "problem": {"b": "masla", "e": "problem"},
+        "please": {"b": "meharbani karke", "e": "please"}, "fix": {"b": "theek", "e": "fix"}, "password": {"b": "khufia lafz", "e": "password"},
+        "reset": {"b": "dobara set", "e": "reset"}, "agent": {"b": "numainda", "e": "agent"}, "ticket": {"b": "shikayat", "e": "ticket"},
+        "service": {"b": "khidmat", "e": "service"}
+      },
+      "templates": [
+        "{app} mein {login} ka {problem} hai, {please} {fix} karein",
+        "Mujhe {password} {reset} karna hai",
+        "Meri {ticket} par koi jawab nahi aya",
+        "Mujhe {agent} se baat karni hai",
+        "{service} bohat kharab hai, {please} jawab dein",
+        "{login} karte waqt {problem} aa raha hai"
+      ]
+    }
+  }
+}

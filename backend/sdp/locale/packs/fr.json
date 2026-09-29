@@ -1,0 +1,143 @@
+{
+ "code": "fr",
+ "language": "fr",
+ "country": "FR",
+ "script": "Latin",
+ "aliases": [
+  "french",
+  "france",
+  "français"
+ ],
+ "names": {
+  "first_male": [
+   "Louis",
+   "Gabriel",
+   "Hugo",
+   "Lucas",
+   "Théo",
+   "Antoine",
+   "Maxime",
+   "Nicolas"
+  ],
+  "first_female": [
+   "Camille",
+   "Léa",
+   "Manon",
+   "Chloé",
+   "Emma",
+   "Inès",
+   "Élodie",
+   "Juliette"
+  ],
+  "last": [
+   "Martin",
+   "Bernard",
+   "Dubois",
+   "Thomas",
+   "Robert",
+   "Petit",
+   "Durand",
+   "Leroy"
+  ]
+ },
+ "address": {
+  "format": "{number} rue {street}, {postal} {city}",
+  "streets": [
+   "de la Paix",
+   "Victor Hugo",
+   "du Moulin",
+   "des Lilas",
+   "Pasteur",
+   "de l'Église"
+  ],
+  "cities": [
+   "Lyon",
+   "Marseille",
+   "Toulouse",
+   "Nantes",
+   "Lille",
+   "Bordeaux"
+  ],
+  "postal_pattern": "#####"
+ },
+ "phone": {
+  "pattern": "+33 6 ## ## ## ##",
+  "regex": "^\\+33 [67] \\d{2} \\d{2} \\d{2} \\d{2}$"
+ },
+ "national_id": {
+  "name": "INSEE/NIR",
+  "pattern": "[12] ## 0[1-9] ## ### ### {check}",
+  "regex": "^[12] \\d{2} 0[1-9] \\d{2} \\d{3} \\d{3} \\d{2}$",
+  "checksum": "insee"
+ },
+ "currency": {
+  "code": "EUR",
+  "symbol": "€",
+  "position": "after",
+  "space": true,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ",",
+  "thousands": " ",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%d/%m/%Y"
+ },
+ "tax": {
+  "label": "TVA",
+  "default_rate": "0.20",
+  "regions": {
+   "FR": "0.20"
+  },
+  "category_rates": {
+   "food": "0.055",
+   "books": "0.055"
+  }
+ },
+ "scale": {
+  "price_factor": "0.92",
+  "income_median": "2400"
+ },
+ "labels": {
+  "invoice_title": "FACTURE",
+  "receipt_title": "REÇU",
+  "statement_title": "RELEVÉ DE COMPTE",
+  "bill_to": "Facturé à",
+  "issued": "Émise le",
+  "due": "Échéance",
+  "page": "Page",
+  "description": "Description",
+  "qty": "Qté",
+  "unit_price": "Prix unitaire",
+  "amount": "Montant",
+  "subtotal": "Sous-total",
+  "total": "Total",
+  "tax": "Taxe",
+  "prices_include_tax": "Prix TTC.",
+  "currency": "Devise",
+  "seller_tax_id": "N° de TVA",
+  "payment_method": "Mode de paiement",
+  "date": "Date",
+  "balance": "Solde",
+  "debit": "Débit",
+  "credit": "Crédit",
+  "opening_balance": "Solde initial",
+  "closing_balance": "Solde final",
+  "account": "Compte",
+  "thank_you": "Merci",
+  "tendered": "Reçu",
+  "change": "Rendu",
+  "period": "Période",
+  "cash": "Espèces",
+  "card": "Carte"
+ },
+ "pdf": {
+  "direction": "ltr",
+  "font_script": "latin",
+  "reshape": false,
+  "complex_shaping": false
+ },
+ "email_host": "mail.fr.example"
+}

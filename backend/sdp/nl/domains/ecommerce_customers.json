@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce_customers",
+  "description": "Online-shop customers with monthly order history and an optional chargeback/fraud flag.",
+  "keywords": ["ecommerce customer", "ecommerce customers", "e-commerce customer", "e-commerce customers", "online shoppers", "online shop customers", "shoppers"],
+  "table": "customers",
+  "id_column": "customer_id",
+  "identity": ["name", "phone", "address", "date_of_birth"],
+  "columns": [
+    {"name": "segment", "type": "category", "values": {"casual": 0.6, "regular": 0.3, "vip": 0.1}},
+    {"name": "monthly_income", "type": "money", "median_key": "income_median", "sigma": 0.5},
+    {"name": "lifetime_value", "type": "money", "median_key": "income_median", "median_multiple": 1.2, "sigma": 1.0,
+     "corr_with": "monthly_income", "corr": 0.4},
+    {"name": "signup_date", "type": "date", "min_years_ago": 0, "max_years_ago": 8}
+  ],
+  "flag": {"name": "is_fraud", "keywords": ["fraud", "fraudulent", "chargeback", "chargebacks"], "default_rate": 0.01,
+           "risk": {"lifetime_value": 0.3, "signup_date": 0.6}},
+  "history": {"table": "monthly_orders", "default_months": 12, "end_month": "2025-12-01",
+              "count_base": 3.0, "ticket_fraction_of_income": 0.02, "spike_count_multiplier": [2.0, 5.0], "spike_ticket_multiplier": 3.0},
+  "rules": [
+    {"type": "unique", "column": "customer_id"},
+    {"type": "not_null", "column": "name"},
+    {"type": "range", "column": "lifetime_value", "min": 0}
+  ]
+}

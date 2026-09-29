@@ -1,0 +1,276 @@
+{
+ "code": "zh",
+ "language": "zh",
+ "country": "CN",
+ "script": "Han",
+ "aliases": [
+  "chinese",
+  "china",
+  "mandarin"
+ ],
+ "names": {
+  "first_male": [
+   "伟",
+   "强",
+   "磊",
+   "军",
+   "洋",
+   "勇",
+   "杰",
+   "涛"
+  ],
+  "first_female": [
+   "芳",
+   "娜",
+   "敏",
+   "静",
+   "丽",
+   "艳",
+   "娟",
+   "霞"
+  ],
+  "last": [
+   "王",
+   "李",
+   "张",
+   "刘",
+   "陈",
+   "杨",
+   "黄",
+   "赵"
+  ],
+  "order": "family_given",
+  "joiner": ""
+ },
+ "names_latin": {
+  "first_male": [
+   "Wei",
+   "Qiang",
+   "Lei",
+   "Jun",
+   "Yang",
+   "Yong"
+  ],
+  "first_female": [
+   "Fang",
+   "Na",
+   "Min",
+   "Jing",
+   "Li",
+   "Yan"
+  ],
+  "last": [
+   "Wang",
+   "Li",
+   "Zhang",
+   "Liu",
+   "Chen",
+   "Yang"
+  ],
+  "order": "family_given",
+  "joiner": " "
+ },
+ "address": {
+  "format": "{city}市{street}{number}号 {postal}",
+  "streets": [
+   "人民路",
+   "中山路",
+   "解放路",
+   "建设路",
+   "和平路",
+   "文化路"
+  ],
+  "cities": [
+   "北京",
+   "上海",
+   "广州",
+   "成都",
+   "杭州",
+   "武汉"
+  ],
+  "postal_pattern": "######"
+ },
+ "phone": {
+  "pattern": "+86 1[3-9]# #### ####",
+  "regex": "^\\+86 1[3-9]\\d \\d{4} \\d{4}$"
+ },
+ "national_id": {
+  "name": "Resident ID",
+  "pattern": "[1-6]#####{date:%Y%m%d}###{check}",
+  "regex": "^[1-6]\\d{5}(19|20)\\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])\\d{3}[\\dX]$",
+  "checksum": "iso7064_11_2"
+ },
+ "currency": {
+  "code": "CNY",
+  "symbol": "¥",
+  "position": "before",
+  "space": false,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%Y-%m-%d"
+ },
+ "tax": {
+  "label": "VAT",
+  "default_rate": "0.13",
+  "regions": {
+   "CN": "0.13"
+  },
+  "category_rates": {
+   "books": "0.09",
+   "food": "0.09"
+  },
+  "label_native": "增值税"
+ },
+ "scale": {
+  "price_factor": "7.2",
+  "income_median": "9000"
+ },
+ "address_latin": {
+  "format": "{number} {street}, {city} {postal}",
+  "streets": [
+   "Renmin Rd",
+   "Zhongshan Rd",
+   "Jiefang Rd",
+   "Jianshe Rd",
+   "Heping Rd",
+   "Wenhua Rd"
+  ],
+  "cities": [
+   "Beijing",
+   "Shanghai",
+   "Guangzhou",
+   "Chengdu",
+   "Hangzhou",
+   "Wuhan"
+  ],
+  "postal_pattern": "######"
+ },
+ "labels": {
+  "invoice_title": "发票",
+  "receipt_title": "收据",
+  "statement_title": "对账单",
+  "bill_to": "客户",
+  "issued": "开票日期",
+  "due": "到期日",
+  "page": "页",
+  "description": "描述",
+  "qty": "数量",
+  "unit_price": "单价",
+  "amount": "金额",
+  "subtotal": "小计",
+  "total": "合计",
+  "tax": "税",
+  "prices_include_tax": "价格含税。",
+  "currency": "币种",
+  "seller_tax_id": "税号",
+  "payment_method": "付款方式",
+  "date": "日期",
+  "balance": "余额",
+  "debit": "借方",
+  "credit": "贷方",
+  "opening_balance": "期初余额",
+  "closing_balance": "期末余额",
+  "account": "账户",
+  "thank_you": "谢谢",
+  "tendered": "实收",
+  "change": "找零",
+  "period": "期间",
+  "cash": "现金",
+  "card": "银行卡"
+ },
+ "pdf": {
+  "direction": "ltr",
+  "font_script": "cjk",
+  "reshape": false,
+  "complex_shaping": false
+ },
+ "email_host": "mail.cn.example",
+ "translit": {
+  "伟": [
+   "Wei"
+  ],
+  "强": [
+   "Qiang"
+  ],
+  "磊": [
+   "Lei"
+  ],
+  "军": [
+   "Jun"
+  ],
+  "洋": [
+   "Yang"
+  ],
+  "勇": [
+   "Yong"
+  ],
+  "杰": [
+   "Jie"
+  ],
+  "涛": [
+   "Tao"
+  ],
+  "芳": [
+   "Fang"
+  ],
+  "娜": [
+   "Na"
+  ],
+  "敏": [
+   "Min"
+  ],
+  "静": [
+   "Jing"
+  ],
+  "丽": [
+   "Li"
+  ],
+  "艳": [
+   "Yan"
+  ],
+  "娟": [
+   "Juan"
+  ],
+  "霞": [
+   "Xia"
+  ],
+  "王": [
+   "Wang",
+   "Wong"
+  ],
+  "李": [
+   "Li",
+   "Lee"
+  ],
+  "张": [
+   "Zhang",
+   "Chang"
+  ],
+  "刘": [
+   "Liu",
+   "Lau"
+  ],
+  "陈": [
+   "Chen",
+   "Chan"
+  ],
+  "杨": [
+   "Yang",
+   "Yeung"
+  ],
+  "黄": [
+   "Huang",
+   "Wong"
+  ],
+  "赵": [
+   "Zhao",
+   "Chao"
+  ]
+ }
+}

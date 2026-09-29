@@ -1,0 +1,282 @@
+{
+ "code": "ur-PK",
+ "language": "ur",
+ "country": "PK",
+ "script": "Arabic",
+ "aliases": [
+  "pakistani",
+  "pakistan",
+  "urdu"
+ ],
+ "names": {
+  "first_male": [
+   "محمد",
+   "علی",
+   "احمد",
+   "حسن",
+   "عمر",
+   "بلال",
+   "فہد",
+   "زین",
+   "عثمان"
+  ],
+  "first_female": [
+   "عائشہ",
+   "فاطمہ",
+   "زینب",
+   "مریم",
+   "سعدیہ",
+   "حنا",
+   "نورین",
+   "ثنا"
+  ],
+  "last": [
+   "خان",
+   "احمد",
+   "شاہ",
+   "ملک",
+   "چوہدری",
+   "بٹ",
+   "قریشی",
+   "انصاری"
+  ]
+ },
+ "names_latin": {
+  "first_male": [
+   "Muhammad",
+   "Ali",
+   "Ahmed",
+   "Hassan",
+   "Omar",
+   "Bilal",
+   "Faisal"
+  ],
+  "first_female": [
+   "Ayesha",
+   "Fatima",
+   "Zainab",
+   "Maryam",
+   "Hina",
+   "Sana"
+  ],
+  "last": [
+   "Khan",
+   "Ahmed",
+   "Shah",
+   "Malik",
+   "Butt",
+   "Qureshi"
+  ]
+ },
+ "address": {
+  "format": "{number} {street}, {city} {postal}",
+  "streets": [
+   "Mall Road",
+   "Jinnah Avenue",
+   "Canal Road",
+   "Clifton Road",
+   "Airport Road",
+   "Ferozepur Road"
+  ],
+  "cities": [
+   "Lahore",
+   "Karachi",
+   "Islamabad",
+   "Faisalabad",
+   "Multan",
+   "Peshawar"
+  ],
+  "postal_pattern": "#####"
+ },
+ "phone": {
+  "pattern": "+92 3## #######",
+  "regex": "^\\+92 3\\d{2} \\d{7}$"
+ },
+ "national_id": {
+  "name": "CNIC",
+  "pattern": "#####-#######-#",
+  "regex": "^\\d{5}-\\d{7}-\\d$",
+  "checksum": null
+ },
+ "currency": {
+  "code": "PKR",
+  "symbol": "Rs",
+  "position": "before",
+  "space": true,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%d-%m-%Y"
+ },
+ "tax": {
+  "label": "GST",
+  "default_rate": "0.18",
+  "regions": {
+   "ICT": "0.15",
+   "PUNJAB": "0.16",
+   "SINDH": "0.13"
+  },
+  "category_rates": {
+   "food": "0"
+  },
+  "label_native": "جی ایس ٹی"
+ },
+ "scale": {
+  "price_factor": "280",
+  "income_median": "90000"
+ },
+ "labels": {
+  "invoice_title": "انوائس",
+  "receipt_title": "رسید",
+  "statement_title": "اکاؤنٹ اسٹیٹمنٹ",
+  "bill_to": "بل کس کے نام",
+  "issued": "تاریخ اجراء",
+  "due": "آخری تاریخ",
+  "page": "صفحہ",
+  "description": "تفصیل",
+  "qty": "مقدار",
+  "unit_price": "فی یونٹ قیمت",
+  "amount": "رقم",
+  "subtotal": "ذیلی کل",
+  "total": "کل",
+  "tax": "ٹیکس",
+  "prices_include_tax": "قیمتوں میں ٹیکس شامل ہے",
+  "currency": "کرنسی",
+  "seller_tax_id": "ٹیکس نمبر",
+  "payment_method": "ادائیگی کا طریقہ",
+  "date": "تاریخ",
+  "balance": "بیلنس",
+  "debit": "ڈیبٹ",
+  "credit": "کریڈٹ",
+  "opening_balance": "ابتدائی بیلنس",
+  "closing_balance": "اختتامی بیلنس",
+  "account": "اکاؤنٹ",
+  "thank_you": "شکریہ",
+  "tendered": "وصول شدہ رقم",
+  "change": "واپسی",
+  "period": "مدت",
+  "cash": "نقد",
+  "card": "کارڈ"
+ },
+ "pdf": {
+  "direction": "rtl",
+  "font_script": "arabic",
+  "reshape": true,
+  "complex_shaping": false
+ },
+ "native_digits": {
+  "digits": "۰۱۲۳۴۵۶۷۸۹",
+  "decimal": "٫",
+  "thousands": "٬"
+ },
+ "email_host": "mail.pk.example",
+ "translit": {
+  "محمد": [
+   "Muhammad",
+   "Mohammad",
+   "Mohammed",
+   "Muhammed",
+   "Mohd"
+  ],
+  "علی": [
+   "Ali",
+   "Aly"
+  ],
+  "احمد": [
+   "Ahmed",
+   "Ahmad",
+   "Ahmet"
+  ],
+  "حسن": [
+   "Hassan",
+   "Hasan"
+  ],
+  "عمر": [
+   "Omar",
+   "Umar"
+  ],
+  "بلال": [
+   "Bilal",
+   "Belal"
+  ],
+  "فہد": [
+   "Fahad",
+   "Fahd"
+  ],
+  "زین": [
+   "Zain",
+   "Zayn"
+  ],
+  "عثمان": [
+   "Usman",
+   "Osman",
+   "Uthman"
+  ],
+  "عائشہ": [
+   "Ayesha",
+   "Aisha",
+   "Aishah"
+  ],
+  "فاطمہ": [
+   "Fatima",
+   "Fatimah"
+  ],
+  "زینب": [
+   "Zainab",
+   "Zaynab",
+   "Zeinab"
+  ],
+  "مریم": [
+   "Maryam",
+   "Mariam"
+  ],
+  "سعدیہ": [
+   "Sadia",
+   "Saadia"
+  ],
+  "حنا": [
+   "Hina",
+   "Hena"
+  ],
+  "نورین": [
+   "Noreen",
+   "Nureen"
+  ],
+  "ثنا": [
+   "Sana",
+   "Sanaa"
+  ],
+  "خان": [
+   "Khan"
+  ],
+  "شاہ": [
+   "Shah"
+  ],
+  "ملک": [
+   "Malik",
+   "Malek"
+  ],
+  "چوہدری": [
+   "Chaudhry",
+   "Chaudhary",
+   "Choudhry"
+  ],
+  "بٹ": [
+   "Butt",
+   "But"
+  ],
+  "قریشی": [
+   "Qureshi",
+   "Quraishi"
+  ],
+  "انصاری": [
+   "Ansari",
+   "Ansary"
+  ]
+ }
+}

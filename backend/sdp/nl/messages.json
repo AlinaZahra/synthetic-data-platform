@@ -1,0 +1,87 @@
+{
+  "_note": "M7: answer catalog per language. {placeholders} are filled by nl.multilingual. Hand-written; needs a fluent-speaker review.",
+  "en": {
+    "understood": "Here is what I understood. Please confirm before I generate.", "rows": "Rows", "domain": "Kind of records", "locale": "Locale", "flag": "Flag rate", "history": "History (months)", "seed": "Seed",
+    "domain_bank_customers": "bank customers", "domain_ecommerce_customers": "e-commerce customers",
+    "loc_en-US": "United States (English)", "loc_en-GB": "United Kingdom (English)", "loc_ur-PK": "Pakistan (Urdu)", "loc_ar": "Saudi Arabia (Arabic)", "loc_hi": "India (Hindi)", "loc_es": "Spain (Spanish)", "loc_fr": "France (French)", "loc_zh": "China (Chinese)",
+    "flag_is_fraud": "fraud",
+    "err_empty": "Describe the dataset you want, for example '5,000 Pakistani bank customers, 3% fraud'.",
+    "err_no_domain": "I could not tell what kind of records you want. Supported: {supported}.", "err_no_rows": "I could not find how many rows you want (for example 5,000 or 10k).",
+    "err_rows_range": "The row count {rows} is outside 1 to {max}.", "err_history_long": "A history longer than 120 months is not supported.", "err_invalid": "The request is not valid: {detail}",
+    "warn_default_locale": "No country or language was mentioned; assuming United States English.", "warn_multi_locale": "Several locales were mentioned ({locales}); using {used}.",
+    "warn_high_flag": "A {rate} {flag} rate is unusually high.", "warn_pct_ignored": "A percentage was given but it is not attached to a known flag; ignored.", "warn_history_default": "History was mentioned without a length; using the default.",
+    "edit_applied": "Applied {n} change(s).", "edit_none": "I could not turn that into a change. Try, for example, 'double customers from Lahore' or 'fraud 5%'.", "edit_before": "Before", "edit_after": "After", "edit_rows": "rows"
+  },
+  "es": {
+    "understood": "Esto es lo que entendí. Confirma antes de generar.", "rows": "Filas", "domain": "Tipo de registros", "locale": "Configuración regional", "flag": "Tasa de la marca", "history": "Historial (meses)", "seed": "Semilla",
+    "domain_bank_customers": "clientes bancarios", "domain_ecommerce_customers": "clientes de comercio electrónico",
+    "loc_en-US": "Estados Unidos (inglés)", "loc_en-GB": "Reino Unido (inglés)", "loc_ur-PK": "Pakistán (urdu)", "loc_ar": "Arabia Saudita (árabe)", "loc_hi": "India (hindi)", "loc_es": "España (español)", "loc_fr": "Francia (francés)", "loc_zh": "China (chino)",
+    "flag_is_fraud": "fraude",
+    "err_empty": "Describe el conjunto de datos que quieres, por ejemplo '5.000 clientes bancarios pakistaníes, 3% de fraude'.",
+    "err_no_domain": "No pude saber qué tipo de registros quieres. Compatibles: {supported}.", "err_no_rows": "No encontré cuántas filas quieres (por ejemplo 5.000 o 10k).",
+    "err_rows_range": "El número de filas {rows} está fuera del rango de 1 a {max}.", "err_history_long": "No se admite un historial de más de 120 meses.", "err_invalid": "La solicitud no es válida: {detail}",
+    "warn_default_locale": "No se mencionó país ni idioma; se asume inglés de Estados Unidos.", "warn_multi_locale": "Se mencionaron varias configuraciones regionales ({locales}); se usa {used}.",
+    "warn_high_flag": "Una tasa de {flag} del {rate} es inusualmente alta.", "warn_pct_ignored": "Se indicó un porcentaje que no corresponde a ninguna marca conocida; se ignora.", "warn_history_default": "Se mencionó el historial sin duración; se usa el valor por defecto.",
+    "edit_applied": "Se aplicaron {n} cambio(s).", "edit_none": "No pude convertir eso en un cambio. Prueba, por ejemplo, 'duplica los clientes de Lahore' o 'fraude 5%'.", "edit_before": "Antes", "edit_after": "Después", "edit_rows": "filas"
+  },
+  "fr": {
+    "understood": "Voici ce que j'ai compris. Merci de confirmer avant la génération.", "rows": "Lignes", "domain": "Type d'enregistrements", "locale": "Paramètres régionaux", "flag": "Taux de l'indicateur", "history": "Historique (mois)", "seed": "Graine",
+    "domain_bank_customers": "clients bancaires", "domain_ecommerce_customers": "clients e-commerce",
+    "loc_en-US": "États-Unis (anglais)", "loc_en-GB": "Royaume-Uni (anglais)", "loc_ur-PK": "Pakistan (ourdou)", "loc_ar": "Arabie saoudite (arabe)", "loc_hi": "Inde (hindi)", "loc_es": "Espagne (espagnol)", "loc_fr": "France (français)", "loc_zh": "Chine (chinois)",
+    "flag_is_fraud": "fraude",
+    "err_empty": "Décrivez le jeu de données souhaité, par exemple « 5 000 clients bancaires pakistanais, 3 % de fraude ».",
+    "err_no_domain": "Je n'ai pas compris quel type d'enregistrements vous voulez. Pris en charge : {supported}.", "err_no_rows": "Je n'ai pas trouvé le nombre de lignes souhaité (par exemple 5 000 ou 10k).",
+    "err_rows_range": "Le nombre de lignes {rows} est hors de la plage 1 à {max}.", "err_history_long": "Un historique de plus de 120 mois n'est pas pris en charge.", "err_invalid": "La demande n'est pas valide : {detail}",
+    "warn_default_locale": "Aucun pays ni langue mentionné ; anglais des États-Unis supposé.", "warn_multi_locale": "Plusieurs paramètres régionaux mentionnés ({locales}) ; {used} est utilisé.",
+    "warn_high_flag": "Un taux de {flag} de {rate} est inhabituellement élevé.", "warn_pct_ignored": "Un pourcentage a été donné sans indicateur connu ; ignoré.", "warn_history_default": "L'historique est mentionné sans durée ; valeur par défaut utilisée.",
+    "edit_applied": "{n} modification(s) appliquée(s).", "edit_none": "Je n'ai pas pu en faire une modification. Essayez par exemple « double les clients de Lahore » ou « fraude 5 % ».", "edit_before": "Avant", "edit_after": "Après", "edit_rows": "lignes"
+  },
+  "ur": {
+    "understood": "میں نے یہ سمجھا ہے۔ تیار کرنے سے پہلے تصدیق کریں۔", "rows": "قطاریں", "domain": "ریکارڈ کی قسم", "locale": "علاقائی ترتیب", "flag": "فلیگ کی شرح", "history": "ہسٹری (ماہ)", "seed": "سیڈ",
+    "domain_bank_customers": "بینک صارفین", "domain_ecommerce_customers": "ای کامرس صارفین",
+    "loc_en-US": "امریکہ (انگریزی)", "loc_en-GB": "برطانیہ (انگریزی)", "loc_ur-PK": "پاکستان (اردو)", "loc_ar": "سعودی عرب (عربی)", "loc_hi": "بھارت (ہندی)", "loc_es": "اسپین (ہسپانوی)", "loc_fr": "فرانس (فرانسیسی)", "loc_zh": "چین (چینی)",
+    "flag_is_fraud": "فراڈ",
+    "err_empty": "مطلوبہ ڈیٹا سیٹ بیان کریں، مثلاً '5000 پاکستانی بینک صارفین، 3 فیصد فراڈ'۔",
+    "err_no_domain": "میں سمجھ نہیں سکا کہ آپ کس قسم کے ریکارڈ چاہتے ہیں۔ معاون اقسام: {supported}۔", "err_no_rows": "مجھے قطاروں کی تعداد نہیں ملی (مثلاً 5000 یا 10k)۔",
+    "err_rows_range": "قطاروں کی تعداد {rows} حد 1 سے {max} سے باہر ہے۔", "err_history_long": "120 ماہ سے زیادہ کی ہسٹری معاون نہیں۔", "err_invalid": "درخواست درست نہیں: {detail}",
+    "warn_default_locale": "کسی ملک یا زبان کا ذکر نہیں ہوا؛ امریکی انگریزی فرض کی گئی۔", "warn_multi_locale": "کئی علاقائی ترتیبات کا ذکر ہوا ({locales})؛ {used} استعمال ہو رہی ہے۔",
+    "warn_high_flag": "{flag} کی {rate} شرح غیر معمولی طور پر زیادہ ہے۔", "warn_pct_ignored": "فیصد دی گئی مگر کسی معلوم فلیگ سے منسلک نہیں؛ نظر انداز۔", "warn_history_default": "ہسٹری کا ذکر بغیر مدت کے ہوا؛ طے شدہ مدت استعمال ہو رہی ہے۔",
+    "edit_applied": "{n} تبدیلی(اں) لاگو ہوئیں۔", "edit_none": "میں اسے تبدیلی میں نہیں بدل سکا۔ مثلاً 'لاہور کے صارفین دگنے کریں' یا 'فراڈ 5%' آزمائیں۔", "edit_before": "پہلے", "edit_after": "بعد", "edit_rows": "قطاریں"
+  },
+  "ar": {
+    "understood": "هذا ما فهمته. يرجى التأكيد قبل التوليد.", "rows": "الصفوف", "domain": "نوع السجلات", "locale": "الإعدادات الإقليمية", "flag": "نسبة المؤشر", "history": "السجل (أشهر)", "seed": "البذرة",
+    "domain_bank_customers": "عملاء البنك", "domain_ecommerce_customers": "عملاء التجارة الإلكترونية",
+    "loc_en-US": "الولايات المتحدة (الإنجليزية)", "loc_en-GB": "المملكة المتحدة (الإنجليزية)", "loc_ur-PK": "باكستان (الأردية)", "loc_ar": "السعودية (العربية)", "loc_hi": "الهند (الهندية)", "loc_es": "إسبانيا (الإسبانية)", "loc_fr": "فرنسا (الفرنسية)", "loc_zh": "الصين (الصينية)",
+    "flag_is_fraud": "الاحتيال",
+    "err_empty": "صف مجموعة البيانات المطلوبة، مثل '5000 عميل بنك باكستاني، 3% احتيال'.",
+    "err_no_domain": "لم أتمكن من معرفة نوع السجلات المطلوبة. المدعوم: {supported}.", "err_no_rows": "لم أجد عدد الصفوف المطلوب (مثل 5000 أو 10k).",
+    "err_rows_range": "عدد الصفوف {rows} خارج النطاق من 1 إلى {max}.", "err_history_long": "السجل الأطول من 120 شهرًا غير مدعوم.", "err_invalid": "الطلب غير صالح: {detail}",
+    "warn_default_locale": "لم يُذكر بلد أو لغة؛ سيتم افتراض الإنجليزية الأمريكية.", "warn_multi_locale": "ذُكرت عدة إعدادات إقليمية ({locales})؛ سيتم استخدام {used}.",
+    "warn_high_flag": "نسبة {flag} البالغة {rate} مرتفعة بشكل غير معتاد.", "warn_pct_ignored": "تم إعطاء نسبة مئوية غير مرتبطة بمؤشر معروف؛ تم تجاهلها.", "warn_history_default": "ذُكر السجل دون مدة؛ سيتم استخدام القيمة الافتراضية.",
+    "edit_applied": "تم تطبيق {n} تغيير.", "edit_none": "لم أتمكن من تحويل ذلك إلى تغيير. جرّب مثلًا 'ضاعف العملاء من لاهور' أو 'الاحتيال 5%'.", "edit_before": "قبل", "edit_after": "بعد", "edit_rows": "صفوف"
+  },
+  "hi": {
+    "understood": "मैंने यह समझा है। बनाने से पहले कृपया पुष्टि करें।", "rows": "पंक्तियाँ", "domain": "रिकॉर्ड का प्रकार", "locale": "क्षेत्रीय सेटिंग", "flag": "फ़्लैग दर", "history": "इतिहास (महीने)", "seed": "सीड",
+    "domain_bank_customers": "बैंक ग्राहक", "domain_ecommerce_customers": "ई-कॉमर्स ग्राहक",
+    "loc_en-US": "अमेरिका (अंग्रेज़ी)", "loc_en-GB": "ब्रिटेन (अंग्रेज़ी)", "loc_ur-PK": "पाकिस्तान (उर्दू)", "loc_ar": "सऊदी अरब (अरबी)", "loc_hi": "भारत (हिंदी)", "loc_es": "स्पेन (स्पेनिश)", "loc_fr": "फ़्रांस (फ़्रेंच)", "loc_zh": "चीन (चीनी)",
+    "flag_is_fraud": "धोखाधड़ी",
+    "err_empty": "अपना डेटासेट बताइए, जैसे '5000 पाकिस्तानी बैंक ग्राहक, 3% धोखाधड़ी'।",
+    "err_no_domain": "मैं समझ नहीं पाया कि आपको किस प्रकार के रिकॉर्ड चाहिए। समर्थित: {supported}।", "err_no_rows": "मुझे पंक्तियों की संख्या नहीं मिली (जैसे 5000 या 10k)।",
+    "err_rows_range": "पंक्तियों की संख्या {rows} सीमा 1 से {max} के बाहर है।", "err_history_long": "120 महीनों से लंबा इतिहास समर्थित नहीं है।", "err_invalid": "अनुरोध मान्य नहीं है: {detail}",
+    "warn_default_locale": "किसी देश या भाषा का उल्लेख नहीं था; अमेरिकी अंग्रेज़ी मानी गई।", "warn_multi_locale": "कई क्षेत्रीय सेटिंग बताई गईं ({locales}); {used} का उपयोग हो रहा है।",
+    "warn_high_flag": "{flag} की {rate} दर असामान्य रूप से अधिक है।", "warn_pct_ignored": "प्रतिशत दिया गया पर किसी ज्ञात फ़्लैग से जुड़ा नहीं; अनदेखा किया गया।", "warn_history_default": "इतिहास का उल्लेख बिना अवधि के था; डिफ़ॉल्ट उपयोग हो रहा है।",
+    "edit_applied": "{n} बदलाव लागू किए गए।", "edit_none": "मैं इसे बदलाव में नहीं बदल सका। उदाहरण: 'लाहौर के ग्राहक दोगुने करें' या 'धोखाधड़ी 5%'।", "edit_before": "पहले", "edit_after": "बाद में", "edit_rows": "पंक्तियाँ"
+  },
+  "zh": {
+    "understood": "我的理解如下。生成前请确认。", "rows": "行数", "domain": "记录类型", "locale": "区域设置", "flag": "标记比例", "history": "历史（月）", "seed": "随机种子",
+    "domain_bank_customers": "银行客户", "domain_ecommerce_customers": "电商客户",
+    "loc_en-US": "美国（英语）", "loc_en-GB": "英国（英语）", "loc_ur-PK": "巴基斯坦（乌尔都语）", "loc_ar": "沙特阿拉伯（阿拉伯语）", "loc_hi": "印度（印地语）", "loc_es": "西班牙（西班牙语）", "loc_fr": "法国（法语）", "loc_zh": "中国（中文）",
+    "flag_is_fraud": "欺诈",
+    "err_empty": "请描述所需的数据集，例如“5000名巴基斯坦银行客户，3%欺诈”。",
+    "err_no_domain": "我无法判断您需要哪种记录。支持的类型：{supported}。", "err_no_rows": "我没有找到所需的行数（例如 5000 或 10k）。",
+    "err_rows_range": "行数 {rows} 超出 1 到 {max} 的范围。", "err_history_long": "不支持超过 120 个月的历史。", "err_invalid": "请求无效：{detail}",
+    "warn_default_locale": "未提到国家或语言，默认使用美国英语。", "warn_multi_locale": "提到了多个区域设置（{locales}），将使用 {used}。",
+    "warn_high_flag": "{flag}比例 {rate} 异常偏高。", "warn_pct_ignored": "给出了百分比，但没有对应的已知标记，已忽略。", "warn_history_default": "提到了历史但未给出时长，使用默认值。",
+    "edit_applied": "已应用 {n} 项更改。", "edit_none": "我无法将其转换为更改。可以试试“把拉合尔的客户翻倍”或“欺诈 5%”。", "edit_before": "之前", "edit_after": "之后", "edit_rows": "行"
+  }
+}

@@ -1,0 +1,281 @@
+{
+ "code": "ar",
+ "language": "ar",
+ "country": "SA",
+ "script": "Arabic",
+ "aliases": [
+  "saudi",
+  "arabic",
+  "arab",
+  "saudi arabia",
+  "ksa"
+ ],
+ "names": {
+  "first_male": [
+   "محمد",
+   "أحمد",
+   "عبدالله",
+   "خالد",
+   "فهد",
+   "سلطان",
+   "يوسف",
+   "عمر"
+  ],
+  "first_female": [
+   "فاطمة",
+   "عائشة",
+   "مريم",
+   "نورة",
+   "سارة",
+   "ليلى",
+   "هند",
+   "ريم"
+  ],
+  "last": [
+   "العتيبي",
+   "القحطاني",
+   "الغامدي",
+   "الزهراني",
+   "الشمري",
+   "الدوسري",
+   "الحربي",
+   "المطيري"
+  ]
+ },
+ "names_latin": {
+  "first_male": [
+   "Mohammed",
+   "Ahmed",
+   "Abdullah",
+   "Khalid",
+   "Fahad",
+   "Yousef"
+  ],
+  "first_female": [
+   "Fatimah",
+   "Aisha",
+   "Maryam",
+   "Noura",
+   "Sarah",
+   "Layla"
+  ],
+  "last": [
+   "Al-Otaibi",
+   "Al-Qahtani",
+   "Al-Ghamdi",
+   "Al-Zahrani",
+   "Al-Shammari",
+   "Al-Harbi"
+  ]
+ },
+ "address": {
+  "format": "{number} {street}, {city} {postal}",
+  "streets": [
+   "King Fahd Road",
+   "Olaya Street",
+   "Tahlia Street",
+   "Prince Sultan Road",
+   "Al Amir Road",
+   "Palestine Street"
+  ],
+  "cities": [
+   "Riyadh",
+   "Jeddah",
+   "Dammam",
+   "Mecca",
+   "Medina",
+   "Khobar"
+  ],
+  "postal_pattern": "#####"
+ },
+ "phone": {
+  "pattern": "+966 5# ### ####",
+  "regex": "^\\+966 5\\d \\d{3} \\d{4}$"
+ },
+ "national_id": {
+  "name": "Saudi National ID",
+  "pattern": "[12]########{check}",
+  "regex": "^[12]\\d{9}$",
+  "checksum": "luhn"
+ },
+ "currency": {
+  "code": "SAR",
+  "symbol": "ر.س",
+  "position": "after",
+  "space": true,
+  "decimals": 2
+ },
+ "number": {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": "western"
+ },
+ "date": {
+  "format": "%d/%m/%Y"
+ },
+ "tax": {
+  "label": "VAT",
+  "default_rate": "0.15",
+  "regions": {
+   "SA": "0.15"
+  },
+  "category_rates": {},
+  "label_native": "ضريبة القيمة المضافة"
+ },
+ "scale": {
+  "price_factor": "3.75",
+  "income_median": "9000"
+ },
+ "labels": {
+  "invoice_title": "فاتورة",
+  "receipt_title": "إيصال",
+  "statement_title": "كشف حساب",
+  "bill_to": "فاتورة إلى",
+  "issued": "تاريخ الإصدار",
+  "due": "تاريخ الاستحقاق",
+  "page": "صفحة",
+  "description": "الوصف",
+  "qty": "الكمية",
+  "unit_price": "سعر الوحدة",
+  "amount": "المبلغ",
+  "subtotal": "المجموع الفرعي",
+  "total": "الإجمالي",
+  "tax": "ضريبة",
+  "prices_include_tax": "الأسعار تشمل الضريبة",
+  "currency": "العملة",
+  "seller_tax_id": "الرقم الضريبي",
+  "payment_method": "طريقة الدفع",
+  "date": "التاريخ",
+  "balance": "الرصيد",
+  "debit": "مدين",
+  "credit": "دائن",
+  "opening_balance": "الرصيد الافتتاحي",
+  "closing_balance": "الرصيد الختامي",
+  "account": "الحساب",
+  "thank_you": "شكراً لكم",
+  "tendered": "المبلغ المدفوع",
+  "change": "الباقي",
+  "period": "الفترة",
+  "cash": "نقداً",
+  "card": "بطاقة"
+ },
+ "pdf": {
+  "direction": "rtl",
+  "font_script": "arabic",
+  "reshape": true,
+  "complex_shaping": false
+ },
+ "native_digits": {
+  "digits": "٠١٢٣٤٥٦٧٨٩",
+  "decimal": "٫",
+  "thousands": "٬"
+ },
+ "email_host": "mail.sa.example",
+ "translit": {
+  "محمد": [
+   "Muhammad",
+   "Mohammad",
+   "Mohammed",
+   "Muhammed"
+  ],
+  "أحمد": [
+   "Ahmed",
+   "Ahmad"
+  ],
+  "عبدالله": [
+   "Abdullah",
+   "Abdallah",
+   "Abdulla"
+  ],
+  "خالد": [
+   "Khalid",
+   "Khaled"
+  ],
+  "فهد": [
+   "Fahad",
+   "Fahd"
+  ],
+  "سلطان": [
+   "Sultan",
+   "Soltan"
+  ],
+  "يوسف": [
+   "Yousef",
+   "Yusuf",
+   "Youssef"
+  ],
+  "عمر": [
+   "Omar",
+   "Umar"
+  ],
+  "فاطمة": [
+   "Fatimah",
+   "Fatima"
+  ],
+  "عائشة": [
+   "Aisha",
+   "Aishah"
+  ],
+  "مريم": [
+   "Maryam",
+   "Mariam"
+  ],
+  "نورة": [
+   "Noura",
+   "Norah",
+   "Nora"
+  ],
+  "سارة": [
+   "Sarah",
+   "Sara"
+  ],
+  "ليلى": [
+   "Layla",
+   "Leila",
+   "Laila"
+  ],
+  "هند": [
+   "Hind",
+   "Hend"
+  ],
+  "ريم": [
+   "Reem",
+   "Rim"
+  ],
+  "العتيبي": [
+   "Al-Otaibi",
+   "Alotaibi",
+   "Al Otaibi"
+  ],
+  "القحطاني": [
+   "Al-Qahtani",
+   "Alqahtani",
+   "Al Qahtani"
+  ],
+  "الغامدي": [
+   "Al-Ghamdi",
+   "Alghamdi"
+  ],
+  "الزهراني": [
+   "Al-Zahrani",
+   "Alzahrani"
+  ],
+  "الشمري": [
+   "Al-Shammari",
+   "Alshamri"
+  ],
+  "الدوسري": [
+   "Al-Dosari",
+   "Aldossari",
+   "Al-Dawsari"
+  ],
+  "الحربي": [
+   "Al-Harbi",
+   "Alharbi"
+  ],
+  "المطيري": [
+   "Al-Mutairi",
+   "Almutairi"
+  ]
+ }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "payslip",
+  "title": "Payslip",
+  "template": "template.html",
+  "required": ["employee.name", "pay_period.label", "gross", "net_pay"],
+  "build": [
+    {"name": "employer", "kind": "company", "suffixes": ["Holdings", "Group", "Ltd", "Industries"]},
+    {"name": "employee", "kind": "person"},
+    {"name": "employee_id", "kind": "id", "prefix": "EMP-", "digits": 6},
+    {"name": "job_title", "kind": "choice", "values": ["Software engineer", "Accountant", "Sales associate", "Operations manager", "Data analyst", "HR specialist"]},
+    {"name": "department", "kind": "choice", "values": ["Engineering", "Finance", "Sales", "Operations", "People"]},
+    {"name": "pay_period", "kind": "month_period", "year": 2025},
+    {"name": "base_salary", "kind": "income", "lo": 0.6, "hi": 2.5},
+    {"name": "earnings", "kind": "group", "types": {"amount": "money"}, "rows": [
+      {"description": "Basic salary", "amount": "=base_salary", "recompute": ["amount"]},
+      {"description": "Housing allowance", "amount": "=pct(base_salary, 0.15)", "recompute": ["amount"]},
+      {"description": "Transport allowance", "amount": "=pct(base_salary, 0.05)", "probability": 0.8, "recompute": ["amount"]},
+      {"description": "Overtime", "amount": "=pct(base_salary, rand(0.01, 0.08))", "probability": 0.5},
+      {"description": "Performance bonus", "amount": "=pct(base_salary, rand(0.05, 0.2))", "probability": 0.25}
+    ]},
+    {"name": "gross", "kind": "computed", "expr": "sum(earnings, 'amount')"},
+    {"name": "deductions", "kind": "group", "types": {"amount": "money"}, "rows": [
+      {"description": "Income tax", "amount": "=bracket(gross, [[0, 0], [0.5, 0.05], [1.2, 0.15], [2.5, 0.25]])", "recompute": ["amount"]},
+      {"description": "Social security (6%)", "amount": "=pct(gross, 0.06)", "recompute": ["amount"]},
+      {"description": "Pension contribution (5%)", "amount": "=pct(gross, 0.05)", "recompute": ["amount"]},
+      {"description": "Health insurance", "amount": "=pct(income_median, rand(0.005, 0.02))", "probability": 0.6}
+    ]},
+    {"name": "total_deductions", "kind": "computed", "expr": "sum(deductions, 'amount')"},
+    {"name": "net_pay", "kind": "computed", "expr": "gross - total_deductions"},
+    {"name": "bank_account", "kind": "id", "prefix": "ACC-", "digits": 10}
+  ],
+  "rules": [
+    {"name": "gross equals the sum of earnings", "expr": "gross == sum(earnings, 'amount')"},
+    {"name": "net pay equals gross minus deductions", "expr": "net_pay == gross - total_deductions"},
+    {"name": "net pay is not negative", "expr": "net_pay >= 0"}
+  ]
+}

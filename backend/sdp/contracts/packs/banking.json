@@ -1,0 +1,174 @@
+{
+ "name": "banking",
+ "title": "Banking",
+ "description": "Retail bank customers with monthly activity and a small fraud share.",
+ "generator": "banking",
+ "default_locale": "ur-PK",
+ "default_rows": 500,
+ "tables": [
+  "customers",
+  "monthly_activity"
+ ],
+ "expectations": [
+  {
+   "expectation_type": "expect_table_row_count_to_be_between",
+   "table": "customers",
+   "kwargs": {
+    "min_value": 10
+   }
+  },
+  {
+   "expectation_type": "expect_table_columns_to_match_set",
+   "table": "customers",
+   "kwargs": {
+    "column_set": [
+     "customer_id",
+     "name",
+     "phone",
+     "national_id",
+     "address",
+     "city",
+     "date_of_birth",
+     "account_type",
+     "monthly_income",
+     "account_balance",
+     "account_open_date",
+     "is_fraud"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "customers",
+   "kwargs": {
+    "column": "customer_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "customers",
+   "kwargs": {
+    "column": "customer_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "customers",
+   "kwargs": {
+    "column": "name"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_of_type",
+   "table": "customers",
+   "kwargs": {
+    "column": "customer_id",
+    "type_": "int"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "customers",
+   "kwargs": {
+    "column": "account_type",
+    "value_set": [
+     "savings",
+     "current",
+     "business"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "customers",
+   "kwargs": {
+    "column": "monthly_income",
+    "min_value": 0.01,
+    "strict_min": false
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "customers",
+   "kwargs": {
+    "column": "account_balance",
+    "min_value": 0
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "customers",
+   "kwargs": {
+    "column": "is_fraud",
+    "value_set": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_proportion_of_values_equal_one_to_be_between",
+   "table": "customers",
+   "kwargs": {
+    "column": "is_fraud",
+    "min_value": 0.0,
+    "max_value": 0.2
+   },
+   "meta": {
+    "description": "fraud share stays a minority"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "customers",
+   "kwargs": {
+    "column": "account_open_date",
+    "max_value": "2025-12-31"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_match_regex",
+   "table": "customers",
+   "kwargs": {
+    "column": "phone",
+    "regex": "\\+?[\\d\\s().-]{7,20}",
+    "mostly": 0.99
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "monthly_activity",
+   "kwargs": {
+    "column": "customer_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "monthly_activity",
+   "kwargs": {
+    "column": "customer_id",
+    "ref_table": "customers",
+    "ref_column": "customer_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "monthly_activity",
+   "kwargs": {
+    "column": "txn_count",
+    "min_value": 0
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "monthly_activity",
+   "kwargs": {
+    "column": "txn_amount",
+    "min_value": 0
+   }
+  }
+ ]
+}

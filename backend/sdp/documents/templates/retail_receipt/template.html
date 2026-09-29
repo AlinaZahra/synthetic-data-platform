@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: 80mm 200mm; margin: 5mm; }
+  body { font-family: Courier; font-size: 8pt; color: #111111; }
+  h1 { font-size: 11pt; text-align: center; margin: 0 0 2pt 0; }
+  .c { text-align: center; }
+  .r { text-align: right; }
+  .muted { color: #555555; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 1.5pt 0; }
+  .rule td { border-top: 0.5pt solid #555555; }
+  .total td { font-weight: bold; font-size: 10pt; border-top: 1pt solid #111111; padding-top: 3pt; }
+</style>
+</head>
+<body>
+  <h1>{{ doc.merchant.name }}</h1>
+  <div class="c muted">{{ doc.merchant.address }}<br/>{{ tax_label }} ID {{ doc.merchant.tax_id }}</div>
+  <p class="c">{{ doc.date | date }} &middot; {{ doc.register }} &middot; {{ doc.cashier }}<br/>{{ doc.receipt_no }}</p>
+  <table>
+    {% for r in doc['items'] %}
+    <tr><td colspan="2">{{ r.description }}</td></tr>
+    <tr><td class="muted">&nbsp;&nbsp;{{ r.quantity }} x {{ r.unit_price | money }}</td><td class="r">{{ r.line_total | money }}</td></tr>
+    {% endfor %}
+    <tr class="rule"><td>Subtotal</td><td class="r">{{ doc.subtotal | money }}</td></tr>
+    <tr><td>{{ tax_label }}</td><td class="r">{{ doc.tax | money }}</td></tr>
+    <tr class="total"><td>TOTAL</td><td class="r">{{ doc.total | money }}</td></tr>
+    <tr><td>{{ 'Cash' if doc.payment == 'cash' else 'Card' }}</td><td class="r">{{ doc.tendered | money }}</td></tr>
+    <tr><td>Change</td><td class="r">{{ doc.change | money }}</td></tr>
+  </table>
+  <p class="c muted">Thank you. Fictional receipt.</p>
+</body>
+</html>

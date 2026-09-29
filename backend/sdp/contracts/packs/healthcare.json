@@ -1,0 +1,208 @@
+{
+ "name": "healthcare",
+ "title": "Healthcare",
+ "description": "Fictional patients, encounters and insurance claims. No real people or providers.",
+ "generator": "healthcare",
+ "default_locale": "en-US",
+ "default_rows": 300,
+ "tables": [
+  "patients",
+  "encounters",
+  "claims"
+ ],
+ "expectations": [
+  {
+   "expectation_type": "expect_table_row_count_to_be_between",
+   "table": "patients",
+   "kwargs": {
+    "min_value": 10
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "patients",
+   "kwargs": {
+    "column": "patient_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "patients",
+   "kwargs": {
+    "column": "patient_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "encounters",
+   "kwargs": {
+    "column": "encounter_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "encounters",
+   "kwargs": {
+    "column": "encounter_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "claims",
+   "kwargs": {
+    "column": "claim_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_unique",
+   "table": "claims",
+   "kwargs": {
+    "column": "claim_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "patients",
+   "kwargs": {
+    "column": "sex",
+    "value_set": [
+     "F",
+     "M"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "patients",
+   "kwargs": {
+    "column": "blood_type",
+    "value_set": [
+     "O+",
+     "A+",
+     "B+",
+     "AB+",
+     "O-",
+     "A-",
+     "B-",
+     "AB-"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "patients",
+   "kwargs": {
+    "column": "date_of_birth",
+    "max_value": "2025-12-31"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "encounters",
+   "kwargs": {
+    "column": "patient_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "encounters",
+   "kwargs": {
+    "column": "patient_id",
+    "ref_table": "patients",
+    "ref_column": "patient_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "encounters",
+   "kwargs": {
+    "column": "encounter_type",
+    "value_set": [
+     "outpatient",
+     "emergency",
+     "inpatient"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_match_regex",
+   "table": "encounters",
+   "kwargs": {
+    "column": "diagnosis_code",
+    "regex": "[A-Z]\\d{2}(\\.\\d{1,3})?"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "encounters",
+   "kwargs": {
+    "column": "length_of_stay_days",
+    "min_value": 0,
+    "max_value": 60
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "encounters",
+   "kwargs": {
+    "column": "charge",
+    "min_value": 0
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_not_be_null",
+   "table": "claims",
+   "kwargs": {
+    "column": "encounter_id"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_other_table",
+   "table": "claims",
+   "kwargs": {
+    "column": "encounter_id",
+    "ref_table": "encounters",
+    "ref_column": "encounter_id"
+   },
+   "meta": {
+    "description": "referential integrity"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_in_set",
+   "table": "claims",
+   "kwargs": {
+    "column": "status",
+    "value_set": [
+     "approved",
+     "partially_approved",
+     "denied",
+     "pending"
+    ]
+   }
+  },
+  {
+   "expectation_type": "expect_column_pair_values_a_to_be_greater_than_b",
+   "table": "claims",
+   "kwargs": {
+    "column_A": "billed_amount",
+    "column_B": "approved_amount",
+    "or_equal": true
+   },
+   "meta": {
+    "description": "a claim never pays more than it billed"
+   }
+  },
+  {
+   "expectation_type": "expect_column_values_to_be_between",
+   "table": "claims",
+   "kwargs": {
+    "column": "billed_amount",
+    "min_value": 0
+   }
+  }
+ ]
+}
