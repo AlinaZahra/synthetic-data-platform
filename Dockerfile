@@ -31,7 +31,8 @@ COPY --from=ui /ui/dist ./static
 
 # run as an unprivileged user; /data holds job manifests and outputs (mount a volume to keep them)
 ENV SDP_DATA_DIR=/data
-RUN useradd --create-home --uid 10001 sdp && mkdir -p /data && chown -R sdp:sdp /app /data
+RUN useradd --create-home --uid 10001 sdp && mkdir -p /data && chown -R sdp:sdp /app /data \
+ && chmod -R a+rwX /data     # writable even when the host runs the container as another user (e.g. Hugging Face Spaces uses uid 1000)
 VOLUME ["/data"]
 USER sdp
 
